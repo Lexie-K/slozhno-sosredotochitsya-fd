@@ -65,6 +65,7 @@
 .header {
   position: relative;
   display: grid;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
   padding-block-end: 20px;
@@ -159,7 +160,7 @@ header__theme-menu-button {
 @media (min-width: 768px) {
   .header__cover-title {
     position: relative;
-    right: 15px;
+    right: 20px;
     justify-self: start;
   }
 }
@@ -241,7 +242,7 @@ header__theme-menu-button {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 50px;
-  margin-block-start: 20px;
+  margin-block-start: 30px;
 }
 
 .content-position-decor {
@@ -370,6 +371,7 @@ header__theme-menu-button {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-block-start: 10px;
 }
 
 .visual-content__image {
@@ -417,9 +419,25 @@ header__theme-menu-button {
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
-  margin-block-start: 40px;
+  padding-block-start: 40px;
   block-size: 100vh;
   min-block-size: 668px;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    margin-block-start: 50px;
+    padding-block-start: 0px;
+    min-block-size: 1024px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    margin-block-start: 50px;
+    padding-block-start: 0px;
+    min-block-size: 768px;
+  }
 }
 
 .footer__title {
@@ -442,7 +460,7 @@ header__theme-menu-button {
   &:before {
     content: '';
     position: absolute;
-    bottom: 0px;
+    bottom: -8px;
     left: 0px;
     width: 25px;
     height: 25px;
@@ -453,7 +471,7 @@ header__theme-menu-button {
   &:after {
     content: '';
     position: absolute;
-    top: 20px;
+    top: 29px;
     right: 0px;
     width: 25px;
     height: 25px;
@@ -465,11 +483,11 @@ header__theme-menu-button {
 @media (min-width: 768px) {
   .footer__decorated-zone {
     &:before {
-      bottom: 15px;
+      bottom: 25px;
     }
-   
+
     &:after {
-      top: 25px;
+      top: 15px;
     }
   }
 }
