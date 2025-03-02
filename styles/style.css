@@ -24,7 +24,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--decor-accent--color);
+  border-bottom: 1px solid var(--decor-accent-color);
 }
 
 .corner-decor-element {
