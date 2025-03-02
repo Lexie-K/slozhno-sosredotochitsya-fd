@@ -1,6 +1,28 @@
+/* ИНФОРМАЦИЯ ИЗ ТЗ
+ Предположим, вы выбрали основной тёмную тему. Опишем структуру кода внутри файлов стилей.
+Файл variables.css:
+:root {
+ Переменные тёмной темы 
+}
+Файл dark.css:
+:root.theme-dark {
+   Дублируем переменные для тёмной темы 
+}
+
+:root.theme-light {
+  Переменные светлой темы  
+}
+
+Остальные стили, только при необходимости 
+
+@media (prefers-color-scheme: light) {
+  :root {
+    Дублируем переменные светлой темы 
+}
+*/
+
 :root.theme-light {
   --bg-color: #fff1f7;
-  --main-font: 'IBM Plex Mono';
   --accent-color: #ff8dcb;
   --outline-hover-button: 50, 49, 45;
   --line-accent-color: #353430;
@@ -8,10 +30,6 @@
   --cover-title: #ffc2e6;
   --paragraph-color: #353430;
   --bg-image: url('../images/cover-image-light.png');
-  --main-text-size: 18px;
-  --bold-text-weight: 700;
-  --regular-text-weight: 400;
-  --main-line-height: 130%;
   --decor-accent-color: #353430;
   --article-topic-accent-color: #353430;
   --menu-buttons-color: #353430;
@@ -20,7 +38,6 @@
 @media (prefers-color-scheme: light) {
   :root {
     --bg-color: #fff1f7;
-    --main-font: 'IBM Plex Mono';
     --accent-color: #ff8dcb;
     --outline-hover-button: 50, 49, 45;
     --line-accent-color: #353430;
@@ -28,34 +45,16 @@
     --cover-title: #ffc2e6;
     --paragraph-color: #353430;
     --bg-image: url('../images/cover-image-light.png');
-    --main-text-size: 18px;
-    --bold-text-weight: 700;
-    --regular-text-weight: 400;
-    --main-line-height: 130%;
     --decor-accent-color: #353430;
     --article-topic-accent-color: #353430;
     --menu-buttons-color: #353430;
   }
+
+  .theme-auto .corner-decor-element {
+    display: none;
+  }
 }
 
-.theme-light .page::before {
-  content: ''/ '';
-  display: none;
-}
-
-.theme-light .dot-decor {
-  display: none;
-}
-
-.theme-light .header__theme-menu-item {
-  color: var(--menu-buttons-color);
-}
-
-.theme-auto .page::before {
-  content: ''/ '';
-  display: none;
-}
-
-.theme-auto .dot-decor {
+.theme-light .corner-decor-element {
   display: none;
 }

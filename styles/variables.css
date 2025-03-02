@@ -3,7 +3,7 @@
   --main-font: 'IBM Plex Mono';
   --accent-color: #ff0070;
   --outline-hover-button: 255, 0, 112;
-  --line-accent-color: #ff0070;
+  --line-accent-color: #f1b2ce;;
   --title-color: #000028;
   --cover-title: #db00ff;
   --paragraph-color: #f1b2ce;
@@ -14,6 +14,6 @@
   --regular-text-weight: 400;
   --main-line-height: 130%;
   --decor-accent-color: #ff0070;
-  --article-topic-accent-color: #ff0070;
   --menu-buttons-color: #ff0070;
 }
+
