@@ -9,7 +9,7 @@
 }
 
 .header__theme-menu-list .header__theme-menu-button_active {
-  outline: 1px solid var(--line-accent-color);
+  outline: 1px solid var(--accent-color);
   pointer-events: none;
 }
 
